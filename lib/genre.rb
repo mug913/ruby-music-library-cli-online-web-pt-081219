@@ -1,4 +1,4 @@
-require_relative './concerns/Findable'
+require_relative './concerns/Findable.rb'
 
 class Genre
   
