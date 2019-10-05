@@ -61,7 +61,7 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     input = gets.strip.to_i
     input += 1
-    output = Song.all.uniq
+    output = Song.all
     output = output.sort_by! {|song| song.name}
     selection = output[3]
     puts "Playing #{selection.name}"
