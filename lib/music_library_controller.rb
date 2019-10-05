@@ -59,7 +59,7 @@ class MusicLibraryController
   
   def play_song
     song_list = []
-    song_list << self.list_songs.split("\n")
+    song_list = self.list_songs.split("\n")
     puts "Which song number would you like to play?"
     input = gets.strip
     binding.pry
