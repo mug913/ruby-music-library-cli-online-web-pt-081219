@@ -58,13 +58,12 @@ class MusicLibraryController
   end
   
   def play_song
-    song_list = []
-    output = Song.all.each {|song| song}
-    output = output.uniq.sort_by {|song| song.name} 
-    song_list << output.each_with_index{|item, index| "#{index + 1}. #{item.artist.name} - #{item.name} - #{item.genre.name}"}
     puts "Which song number would you like to play?"
     input = gets.strip
-    binding.pry
+    output = Song.all.each {|song| song}
+    output = output.uniq.sort_by {|song| song.name}
+    selection = output[input+1]
+    puts "Playing #{selection}"
   end
 end
 
