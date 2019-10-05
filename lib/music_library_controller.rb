@@ -36,7 +36,7 @@ class MusicLibraryController
   end
   
    def list_genres
-    output = Genres.all.map {|item| item.name}
+    output = Genre.all.map {|item| item.name}
     output = output.uniq.sort!
     output.each_with_index{|item, index| puts "#{index + 1}. #{item}"}
   end
