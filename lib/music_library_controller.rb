@@ -25,7 +25,7 @@ class MusicLibraryController
   
   def list_songs
     output = Song.all.each {|song| song}
-    output.sort_by! {|song| song.title} 
+    output.sort_by! {|song| song.name} 
     binding.pry
     output.each_with_index{|item, index| puts "#{index + 1}. #{item}."}
   end
