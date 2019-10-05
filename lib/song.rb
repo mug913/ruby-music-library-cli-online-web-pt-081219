@@ -27,8 +27,8 @@ class Song
     @@all << self 
   end
 
-  def self.create(name)
-    song = Song.new(name)
+  def self.create(name,  artist = nil, genre = nil)
+    song = Song.new(name,  artist = nil, genre = nil)
     song
   end
   
@@ -49,7 +49,7 @@ class Song
     target_song[0]
   end
 
-  def self.find_or_create_by_name(title)
+  def self.find_or_create_by_name(title, artist = nil, genre = nil)
     if  self.find_by_name(title) == nil
       Song.create(title)
     else 
