@@ -2,7 +2,7 @@ require_relative './concerns/Findable.rb'
 
 class Genre
   
-  extend Concers::Findable
+  extend Concerns::Findable
   
   attr_accessor :name, :songs
   
