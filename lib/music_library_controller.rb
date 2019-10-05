@@ -7,7 +7,8 @@ class MusicLibraryController
     importer.import
   end
 
-  def call 
+  def call
+    puts "Welcome to your music library"
   end
   
   
