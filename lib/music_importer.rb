@@ -14,7 +14,7 @@ class MusicImporter
   def self.import 
     file_list = []
     file_list <<  Dir.entries(path).reject {|file| File.directory?(file) || file[0].include?('.')}
-    binding.pry
+    file_list.each {|filename| Song.create_from_filename(filename)}
   end
     
     
