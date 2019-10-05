@@ -1,3 +1,5 @@
+require 'pry'
+
 class MusicImporter
   attr_accessor :path
 
@@ -6,6 +8,8 @@ class MusicImporter
   end
 
   def files(path)
-    
+  binding.pry
+  
+  end
 
 end
