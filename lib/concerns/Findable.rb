@@ -5,5 +5,11 @@ module Concerns::Findable
     target[0]
   end
   
-  
+  def self.find_or_create_by_name(name)
+    if  self.find_by_name(name) == nil
+      self.class.create(name)
+    else 
+      self.find_by_name(name)
+    end
+  end
 end
