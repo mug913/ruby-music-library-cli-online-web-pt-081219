@@ -7,7 +7,7 @@ class MusicImporter
     @path = path
   end
 
-  def files(path)
+  def files
   binding.pry
   
   end
