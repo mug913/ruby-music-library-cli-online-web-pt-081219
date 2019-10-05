@@ -20,6 +20,8 @@ class MusicLibraryController
     puts "What would you like to do?"
     until input == "exit"
       input = gets.strip
+      case input
+      
     end
   end
   
@@ -61,15 +63,16 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     input = gets.strip.to_i
     if input > 0 && input < Song.all.uniq.length
-    
-    input -= 1
-    output = Song.all.uniq.sort_by! {|song| song.name}
-    selection = output[input]
-    if selection
-      puts "Playing #{selection.name} by #{selection.artist.name}"
+      input -= 1
+      output = Song.all.uniq.sort_by! {|song| song.name}
+      selection = output[input]
+      if selection
+        puts "Playing #{selection.name} by #{selection.artist.name}"
+      end
     end
   end
-  end
+  
+  
 end
 
 
