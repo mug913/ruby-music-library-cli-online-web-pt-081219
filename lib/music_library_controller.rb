@@ -64,6 +64,7 @@ class MusicLibraryController
     output = Song.all
     output = output.sort_by! {|song| song.name}
     selection = output[1]
+    binding.pry
     puts "Playing #{selection.name}"
   end
 end
