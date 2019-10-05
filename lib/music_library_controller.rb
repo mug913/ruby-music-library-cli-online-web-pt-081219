@@ -24,8 +24,7 @@ class MusicLibraryController
   end
   
   def list_songs
-    output = Song.all.map {|song| song.name}
-    output.uniq!.sort!
+    output = Song.all.map {|song| song.name.sort!}
     output.each_with_index{|item, index| puts "#{index + 1}. #{item}."}
   end
 end
