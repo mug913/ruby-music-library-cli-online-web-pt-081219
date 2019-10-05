@@ -54,7 +54,7 @@ class MusicLibraryController
     input = gets.strip
     song_list = Song.all.select {|song| song.genre.name == input}
     song_list = song_list.uniq.sort_by {|song| song.name}
-    song_list.each_with_index{|item, index| puts "#{index + 1}. #{item.name} - #{item.genre.name}"}
+    song_list.each_with_index{|item, index| puts "#{index + 1}. #{item.artist.name} - #{item.name}"}
   end
 end
 
