@@ -40,6 +40,10 @@ class MusicLibraryController
     output = output.uniq.sort!
     output.each_with_index{|item, index| puts "#{index + 1}. #{item}"}
   end
+  
+  def list_songs_by_artist
+    
+  end
 end
 
 
