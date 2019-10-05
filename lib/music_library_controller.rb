@@ -63,7 +63,7 @@ class MusicLibraryController
     input += 1
     output = Song.all
     output = output.sort_by! {|song| song.name}
-    selection = output[0]
+    selection = output[1]
     puts "Playing #{selection.name}"
   end
 end
