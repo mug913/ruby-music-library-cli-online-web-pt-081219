@@ -64,7 +64,7 @@ class MusicLibraryController
     output = output.uniq.sort_by {|song| song.name}
     selection = output[input+1]
     binding.pry
-    puts "Playing #{selection}"
+    puts "Playing #{selection.name}"
   end
 end
 
