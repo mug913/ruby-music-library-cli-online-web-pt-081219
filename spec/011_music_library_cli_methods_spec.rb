@@ -1,4 +1,4 @@
-exirequire "spec_helper"
+irequire "spec_helper"
 
 describe "MusicLibraryController - CLI Methods" do
   let(:music_library_controller) { MusicLibraryController.new("./spec/fixtures/mp3s") }
