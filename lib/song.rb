@@ -59,6 +59,9 @@ class Song
 
   def self.new_from_filename(filename)
     title = filename.split(" - ")
+    new_song = Song.create_by_name(title[1])
+    new_song.artist = title[0]
+    new_song.genre = title [2]
     binding.pry
   end
 end
