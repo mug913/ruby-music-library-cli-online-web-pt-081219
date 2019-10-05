@@ -35,3 +35,5 @@ class MusicLibraryController
     output.each_with_index{|item, index| puts "#{index + 1}. #{item.artist.name}"}
   end
 end
+
+list_artists
