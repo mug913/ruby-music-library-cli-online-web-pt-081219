@@ -2,7 +2,7 @@ module Concerns
   module Findable
    
     def find_by_name(name)
-      target = @@all.select{|target| target.name == name}
+      target = self.class.all.select{|target| target.name == name}
       target[0]
     end
   
