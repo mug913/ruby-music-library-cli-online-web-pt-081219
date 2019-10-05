@@ -60,6 +60,6 @@ class Song
   def self.new_from_filename(filename)
     title = filename.split(" - ")
     Song.create(title[1])
-    binding.pry
+ #   binding.pry
   end
 end
