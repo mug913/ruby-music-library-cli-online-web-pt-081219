@@ -27,6 +27,6 @@ class MusicLibraryController
     output = Song.all.each {|song| song}
     output.sort_by! {|song| song.name} 
   # binding.pry
-    output.each_with_index{|item, index| puts "#{index + 1}. #{item.name} - #{iete.artist} - #{item.genre}"}
+    output.each_with_index{|item, index| puts "#{index + 1}. #{item.name} - #{item.artist} - #{item.genre}"}
   end
 end
