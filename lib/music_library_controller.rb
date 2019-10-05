@@ -34,6 +34,12 @@ class MusicLibraryController
     output = output.uniq.sort!
     output.each_with_index{|item, index| puts "#{index + 1}. #{item}"}
   end
+  
+   def list_artists
+    output = Genres.all.map {|item| item.name}
+    output = output.uniq.sort!
+    output.each_with_index{|item, index| puts "#{index + 1}. #{item}"}
+  end
 end
 
 
