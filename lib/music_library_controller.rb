@@ -59,7 +59,7 @@ class MusicLibraryController
   
   def play_song
     puts "Which song number would you like to play?"
-    until input > 0 $$ input <= Song.all.uniq.length
+    until input > 0 && input <= Song.all.uniq.length
     input = gets.strip.to_i
     end
     input -= 1
