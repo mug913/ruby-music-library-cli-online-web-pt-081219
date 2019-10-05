@@ -30,7 +30,7 @@ class MusicLibraryController
   end
   
   def list_artists
-    output = Song.all.map {|song| song.artist.name}
+    output = Artist.all.map {|item| item.name}
     output.uniq!.sort_by! {|item| item} 
     output.each_with_index{|item, index| puts "#{index + 1}. #{item}"}
     binding.pry
