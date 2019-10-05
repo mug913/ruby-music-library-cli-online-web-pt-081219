@@ -14,7 +14,7 @@ class MusicImporter
   def import 
     file_list = []
     file_list <<  Dir.entries(path).reject {|file| File.directory?(file) || file[0].include?('.')}
-    file_list.each {|filename| Song.create_from_filename(filename)}
+    file_list.map {|filename| Song.create_from_filename(filename)}
   end
     
     
