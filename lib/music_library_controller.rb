@@ -62,7 +62,7 @@ class MusicLibraryController
     input = gets.strip.to_i
     output = Song.all.uniq
     output = output.sort_by! {|song| song.name}
-    selection = output[4]
+    selection = output[3]
     #binding.pry
     puts "Playing #{selection.name}"
   end
