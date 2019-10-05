@@ -51,7 +51,7 @@ class Song
 
   def self.find_or_create_by_name(title, artist = nil, genre = nil)
     if  self.find_by_name(title) == nil
-      Song.create(title)
+      Song.create(title, artist = nil, genre = nil)
     else 
         self.find_by_name(title)
     end
@@ -61,7 +61,7 @@ class Song
     title = filename.split(" - ")
     artist = Artist.find_or_create_by_name(title[0])
     genre = Genre.find_or_create_by_name(title[3])
-    new_song = Song.find_or_create_by_name(title[1])
+    new_song = Song.find_or_create_by_name(title[1], artist, genre)
     binding.pry
   end
 end
