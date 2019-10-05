@@ -64,6 +64,7 @@ class Song
     new_song = Song.find_or_create_by_name(title[1])
     new_song.artist = artist
     new_song.genre = genre
+    new_song
    # binding.pry
   end
 end
