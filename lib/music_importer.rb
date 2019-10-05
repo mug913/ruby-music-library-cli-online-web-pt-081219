@@ -8,9 +8,7 @@ class MusicImporter
   end
 
   def files
-  binding.pry
-  
-  
+  Dir.entries(path).reject {|file| File.directory?(file) || file[0].include?('.')}
   end
 
 end
