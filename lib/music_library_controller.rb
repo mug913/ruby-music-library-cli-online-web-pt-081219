@@ -60,9 +60,9 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     input = gets.strip.to_i
-    input += 1
+    input -= 1
     output = Song.all.uniq.sort_by! {|song| song.name}
-    selection = output[4]
+    selection = output[input]
     puts "Playing #{selection.name}"
   end
 end
