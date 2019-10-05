@@ -24,5 +24,7 @@ class MusicLibraryController
   end
   
   def list_songs
+    output = Songs.all
+    output.each_with_index(|item, index|)
   end
 end
