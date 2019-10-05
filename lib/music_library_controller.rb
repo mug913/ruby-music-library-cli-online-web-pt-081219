@@ -36,5 +36,4 @@ class MusicLibraryController
   end
 end
 
-library = MusicLibraryController.new
-library.list_artists
+
